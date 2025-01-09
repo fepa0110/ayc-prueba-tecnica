@@ -1,1 +1,1 @@
-# ayc-prueba-tecnica
+# Lectura de código de barras de producto
