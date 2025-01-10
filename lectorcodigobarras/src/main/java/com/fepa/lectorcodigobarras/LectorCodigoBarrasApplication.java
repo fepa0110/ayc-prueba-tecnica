@@ -1,4 +1,4 @@
-package com.lectorcodigobarras.lectorcodigobarras;
+package com.fepa.lectorcodigobarras;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

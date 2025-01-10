@@ -1,4 +1,4 @@
-package com.lectorcodigobarras.lectorcodigobarras;
+package com.fepa.lectorcodigobarras;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
