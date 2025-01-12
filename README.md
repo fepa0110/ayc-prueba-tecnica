@@ -63,8 +63,15 @@ y retorna la información del mismo decodificada.
         "bulto": string
     }  
     ```
-     - **codigo_scanner:** código original. Debe contener la palabra ACME al final y debe tener entre 12 y 13 carácteres.
+     - **codigo_scanner:** código original. La cadena debe cumplir el siguiente formato:
+        - Lote: 4 dígitos
+        - Mes: 1 caracter
+        - Año: 1 Dígito
+        - Bulto: 2 o 3 dígitos
+        - ACME: Palabra fija ACME
+
      - **lote_extendido:** Información del lote correspondiente a los primeros 6 carácteres, en el que se incluyen lote (4 caracteres), mes (1 digito) y año (1 digito).  
+
      - **bulto:** Información correspondiente al valor de bulto del producto.  
 
 - Por ejemplo:
