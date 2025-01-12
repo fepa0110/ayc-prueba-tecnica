@@ -5,7 +5,7 @@
 Desarrolle un servicio siguiendo el protocolo RESTful que reciba como único parámetro la cadena
 leída y retorne un JSON con los siguientes campos:  
 
-```json
+```ts
 {
     "codigo_scanner": "0001E401ACME" // el string original
     "lote_extendido": "0001E4", // primeros 6 caracteres
@@ -83,3 +83,6 @@ y retorna la información del mismo decodificada.
         }
         ```
 
+- **Código incorrecto**
+
+    En caso de no cumplirse el formato de código requerido, se obtendra la respuesta "Código malformado." con el Status ***400 Bad request***
