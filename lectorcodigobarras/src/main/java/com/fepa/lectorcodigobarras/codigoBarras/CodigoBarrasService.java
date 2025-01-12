@@ -2,16 +2,20 @@ package com.fepa.lectorcodigobarras.codigoBarras;
 
 import org.springframework.stereotype.Service;
 
+import java.util.regex.Pattern;
+
 @Service
 public class CodigoBarrasService {
-    private final String PALABRA_FINAL = "ACME";
+    private final static String PALABRA_FINAL_CODIGO = "ACME";
+    private final static String FORMATO_CODIGO = "\\d{4}.\\d\\d{2,3}"+PALABRA_FINAL_CODIGO;
+    private Pattern patternFormatoCodigo = Pattern.compile(FORMATO_CODIGO);
 
     public CodigoBarras getCodigoBarrasData(String codigo){
-        codigo = codigo.toUpperCase();
+        codigo = codigo.trim().toUpperCase();
 
-        if((codigo.length() == 12 || codigo.length() == 13) 
-            && codigo.endsWith(PALABRA_FINAL)){
-                
+        boolean formatoCorrecto = patternFormatoCodigo.matcher(codigo).matches();
+
+        if(formatoCorrecto){   
             String lote_extendido = codigo.substring(0, 6);
             
             String bulto = 
