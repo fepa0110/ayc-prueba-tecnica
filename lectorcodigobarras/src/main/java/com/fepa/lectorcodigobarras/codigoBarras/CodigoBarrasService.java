@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 public class CodigoBarrasService {
     private final String PALABRA_FINAL = "ACME";
 
-    public CodigoBarras getCodigoBarrasData(String codigo){ 
+    public CodigoBarras getCodigoBarrasData(String codigo){
+        codigo = codigo.toUpperCase();
+
         if((codigo.length() == 12 || codigo.length() == 13) 
             && codigo.endsWith(PALABRA_FINAL)){
                 
@@ -19,7 +21,6 @@ public class CodigoBarrasService {
 
 		    return new CodigoBarras(codigo,lote_extendido,bulto);
         }
-
-        return new CodigoBarras(codigo,"","");
+        else return null;
     }
 }
